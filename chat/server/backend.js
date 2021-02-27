@@ -22,7 +22,6 @@ server.get("/data.json", (req, res) => {
 })
 
 server.post('/dataPost', function(req, res) {
-    console.log(req.body.data)
     fs.writeFile("data.json", JSON.stringify(req.body.data), (err) => {
         console.log(err)
     })
