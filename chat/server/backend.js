@@ -9,9 +9,7 @@ server.use(cors())
 
 server.use(bodyParser.urlencoded({ extended: true }));
 
-fs.writeFile("data.json", '{"messages": [{ "text": "NodeJS", "rendered": "false" }, { "text": "is", "rendered": "false" }, { "text": "hell", "rendered": "false" }]}', (err) => {
-    console.log(err)
-})
+fs.writeFile("data.json", '{"messages": [{ "text": "NodeJS", "rendered": "false" }, { "text": "is", "rendered": "false" }, { "text": "hell", "rendered": "false" }]}', (err) => {})
 
 server.get("/", (req, res) => {
     res.send("Express server")
@@ -22,10 +20,7 @@ server.get("/data.json", (req, res) => {
 })
 
 server.post('/dataPost', function(req, res) {
-    fs.writeFile("data.json", JSON.stringify(req.body.data), (err) => {
-        console.log(err)
-    })
-    console.log("JSON created")
+    fs.writeFile("data.json", JSON.stringify(req.body.data), (err) => {})
     res.send("OK")
 })
 
