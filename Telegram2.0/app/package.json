@@ -4,8 +4,8 @@
     "description": "Simple js chat on fetch",
     "main": "backend.js",
     "scripts": {
-        "dev": "nodemon backend.js",
-        "prod": "node backend.js"
+        "dev": "nodemon server.js",
+        "prod": "node server.js"
     },
     "keywords": [
         "chat"
